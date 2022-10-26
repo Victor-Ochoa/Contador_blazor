@@ -1,0 +1,14 @@
+﻿<h3>Valor Atual:</h3>
+<h2>@ValorAtual</h2>
+
+<button class="btn btn-primary" @onclick="@(e => Mais(1))" value="1">+1</button>
+<button class="btn btn-primary" @onclick="@(e => Mais(5))" value="1">+5</button>
+<button class="btn btn-danger" @onclick="@(e => Menos(1))" value="1">-1</button>
+<button class="btn btn-danger" @onclick="@(e => Menos(5))" value="1">-5</button>
+@code {
+    public int ValorAtual = 0;
+
+    void Mais(int value) => ValorAtual = ValorAtual + value;
+    void Menos(int value) => ValorAtual = ValorAtual - value;
+
+}
